@@ -1,13 +1,19 @@
 def reverse_characters(str)
-    str = "#{str}"
-	str = str.split("").sort{|x, y| y <=> x }.join
-	return str
+	array = str.split("")
+	new_array = []
+		until array.empty?
+		new_array.push(array.pop)
+		end
+	new_array.join
 end
-puts(reverse_characters("Today is a good day"))
+
+#================================
 
 def reverse_words(str)
-    str = "#{str}"
-	str = str.split(" ").sort{|x, y| y <=> x }.join(" ")
-	return str
+	array = str.split(" ")
+	new_array = []
+		until array.empty?
+		new_array.push(array.pop)
+		end
+	new_array.join(" ")
 end
-puts(reverse_words("Today is a good day"))
